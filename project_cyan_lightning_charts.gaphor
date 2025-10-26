@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<gaphor xmlns="https://gaphor.org/model" xmlns:Core="https://gaphor.org/modelinglanguage/Core" xmlns:UML="https://gaphor.org/modelinglanguage/UML" xmlns:general="https://gaphor.org/modelinglanguage/general" version="4" gaphor-version="3.0.0">
+<gaphor xmlns="https://gaphor.org/model" xmlns:Core="https://gaphor.org/modelinglanguage/Core" xmlns:UML="https://gaphor.org/modelinglanguage/UML" xmlns:general="https://gaphor.org/modelinglanguage/general" version="4" gaphor-version="3.1.0">
 <model>
 <Core:StyleSheet id="58d6989a-66f8-11ec-b4c8-0456e5e540ed">
 <styleSheet>
@@ -38,6 +38,9 @@ controlflow {
 <name>
 <val>1. Use Cases</val>
 </name>
+<nestingPackage>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</nestingPackage>
 <ownedDiagram>
 <reflist>
 <ref refid="0c81912e-71b2-11ec-a409-f47b099bf663"/>
@@ -125,9 +128,6 @@ controlflow {
 <owningPackage>
 <ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
 </owningPackage>
-<package>
-<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
-</package>
 <packagedElement>
 <reflist>
 <ref refid="4c3d1584-a135-11f0-a87f-b06ebf836ea7"/>
@@ -209,6 +209,9 @@ controlflow {
 <name>
 <val>2. Domain Analysis</val>
 </name>
+<nestingPackage>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</nestingPackage>
 <ownedDiagram>
 <reflist>
 <ref refid="06ecc092-71b4-11ec-a409-f47b099bf663"/>
@@ -217,14 +220,14 @@ controlflow {
 <owningPackage>
 <ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
 </owningPackage>
-<package>
-<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
-</package>
 </UML:Package>
 <UML:Package id="cccf183a-71b1-11ec-a409-f47b099bf663">
 <name>
 <val>3. Architectural Design</val>
 </name>
+<nestingPackage>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</nestingPackage>
 <ownedDiagram>
 <reflist>
 <ref refid="37edd9b4-71b5-11ec-a409-f47b099bf663"/>
@@ -243,9 +246,6 @@ controlflow {
 <owningPackage>
 <ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
 </owningPackage>
-<package>
-<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
-</package>
 <packagedElement>
 <reflist>
 <ref refid="b73251a0-71b5-11ec-a409-f47b099bf663"/>
@@ -257,6 +257,9 @@ controlflow {
 <name>
 <val>4. Detailed Design</val>
 </name>
+<nestingPackage>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</nestingPackage>
 <ownedDiagram>
 <reflist>
 <ref refid="585f224c-71b6-11ec-a409-f47b099bf663"/>
@@ -266,9 +269,6 @@ controlflow {
 <owningPackage>
 <ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
 </owningPackage>
-<package>
-<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
-</package>
 </UML:Package>
 <UML:UseCaseDiagram id="0c81912e-71b2-11ec-a409-f47b099bf663">
 <element>
@@ -338,7 +338,7 @@ associating them to their use cases.</val>
 <val>258.0</val>
 </width>
 <height>
-<val>85.0</val>
+<val>110.0</val>
 </height>
 <diagram>
 <ref refid="0c81912e-71b2-11ec-a409-f47b099bf663"/>
@@ -491,7 +491,7 @@ associating them to their use cases.</val>
 <val>271.5703125</val>
 </width>
 <height>
-<val>134.0</val>
+<val>144.0</val>
 </height>
 <diagram>
 <ref refid="37edd9b4-71b5-11ec-a409-f47b099bf663"/>
@@ -522,7 +522,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>322.0</val>
 </width>
 <height>
-<val>83.0</val>
+<val>93.0</val>
 </height>
 <diagram>
 <ref refid="ad3969b8-71b5-11ec-a409-f47b099bf663"/>
@@ -536,7 +536,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="f3a82730-71b1-11ec-a409-f47b099bf663"/>
 </element>
 <name>
-<val>Detailed Class Design</val>
+<val>I2C Adapter Pattern</val>
 </name>
 <ownedPresentation>
 <reflist>
@@ -565,7 +565,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>215.0</val>
 </width>
 <height>
-<val>62.0</val>
+<val>76.0</val>
 </height>
 <diagram>
 <ref refid="585f224c-71b6-11ec-a409-f47b099bf663"/>
@@ -915,10 +915,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0c81912e-71b2-11ec-a409-f47b099bf663"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="17b13872-a136-11f0-bc36-b06ebf836ea7"/>
@@ -954,10 +954,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0c81912e-71b2-11ec-a409-f47b099bf663"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="21b82f61-a136-11f0-bf12-b06ebf836ea7"/>
@@ -993,10 +993,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0c81912e-71b2-11ec-a409-f47b099bf663"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="29cf842c-a136-11f0-a335-b06ebf836ea7"/>
@@ -1035,10 +1035,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="f608b88d-a136-11f0-994b-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="f60880ac-a136-11f0-9365-b06ebf836ea7"/>
@@ -1111,10 +1111,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0c81912e-71b2-11ec-a409-f47b099bf663"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <matrix>
 <val>(1.0, 0.0, 0.0, 1.0, 1027.0, 266.0)</val>
@@ -1144,7 +1144,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>359.0</val>
 </width>
 <height>
-<val>62.0</val>
+<val>76.0</val>
 </height>
 <diagram>
 <ref refid="0c81912e-71b2-11ec-a409-f47b099bf663"/>
@@ -1379,10 +1379,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0c81912e-71b2-11ec-a409-f47b099bf663"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="ee2b97e5-a1c7-11f0-87d0-b06ebf836ea7"/>
@@ -1418,10 +1418,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0c81912e-71b2-11ec-a409-f47b099bf663"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="f1771a08-a1c7-11f0-858c-b06ebf836ea7"/>
@@ -1457,10 +1457,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0c81912e-71b2-11ec-a409-f47b099bf663"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="00026a29-a1c8-11f0-afc1-b06ebf836ea7"/>
@@ -1496,10 +1496,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0c81912e-71b2-11ec-a409-f47b099bf663"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="069f7ccd-a1c8-11f0-a8f1-b06ebf836ea7"/>
@@ -1535,10 +1535,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0c81912e-71b2-11ec-a409-f47b099bf663"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="110a984e-a1c8-11f0-a9a6-b06ebf836ea7"/>
@@ -1574,10 +1574,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0c81912e-71b2-11ec-a409-f47b099bf663"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="2285fc96-a1c8-11f0-86da-b06ebf836ea7"/>
@@ -1616,10 +1616,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="284db411-a1c8-11f0-842d-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="284d7b23-a1c8-11f0-b44c-b06ebf836ea7"/>
@@ -1695,10 +1695,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="2b427efe-a1c8-11f0-a5b3-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="2b4248ef-a1c8-11f0-b03a-b06ebf836ea7"/>
@@ -1774,10 +1774,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="2dfc7ee9-a1c8-11f0-ba6f-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="2dfc48ab-a1c8-11f0-b6d8-b06ebf836ea7"/>
@@ -1853,10 +1853,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="31c69a19-a1c8-11f0-b641-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="31c6616a-a1c8-11f0-bd6a-b06ebf836ea7"/>
@@ -1932,10 +1932,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="34667c09-a1c8-11f0-90bc-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="3466440e-a1c8-11f0-b64e-b06ebf836ea7"/>
@@ -2011,10 +2011,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="370d0b5d-a1c8-11f0-87c0-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="370cd3d6-a1c8-11f0-aff4-b06ebf836ea7"/>
@@ -2397,10 +2397,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="6f7090e2-a1c8-11f0-b224-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="22d73ce0-a1ca-11f0-aca5-b06ebf836ea7"/>
@@ -2477,10 +2477,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="6f7090e2-a1c8-11f0-b224-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="386b29a0-a1ca-11f0-a9a3-b06ebf836ea7"/>
@@ -2630,10 +2630,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="6f7090e2-a1c8-11f0-b224-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="ef18793d-a1ca-11f0-b020-b06ebf836ea7"/>
@@ -2669,10 +2669,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="6f7090e2-a1c8-11f0-b224-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="f2178c99-a1ca-11f0-9ff7-b06ebf836ea7"/>
@@ -2711,10 +2711,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="06d72b20-a1cb-11f0-a4bf-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="06d6f015-a1cb-11f0-a69b-b06ebf836ea7"/>
@@ -2790,10 +2790,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="093cbf33-a1cb-11f0-86bd-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="093c84b2-a1cb-11f0-b9b8-b06ebf836ea7"/>
@@ -2866,10 +2866,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="6f7090e2-a1c8-11f0-b224-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="131fc4f3-a1cb-11f0-b8ff-b06ebf836ea7"/>
@@ -2944,10 +2944,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="24ba3ab2-a1cb-11f0-aab5-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="24b9fd3c-a1cb-11f0-97d4-b06ebf836ea7"/>
@@ -3254,10 +3254,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="6f7090e2-a1c8-11f0-b224-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="8d314757-a1cb-11f0-9aea-b06ebf836ea7"/>
@@ -3296,10 +3296,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="93e85446-a1cb-11f0-a781-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="93e81ca4-a1cb-11f0-8c4b-b06ebf836ea7"/>
@@ -3375,10 +3375,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="95f0749b-a1cb-11f0-83a3-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="95f03a60-a1cb-11f0-8fa1-b06ebf836ea7"/>
@@ -3451,10 +3451,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="6f7090e2-a1c8-11f0-b224-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="99a8d885-a1cb-11f0-8d1e-b06ebf836ea7"/>
@@ -3493,10 +3493,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="a20597e8-a1cb-11f0-a670-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="a2055db7-a1cb-11f0-8cdd-b06ebf836ea7"/>
@@ -3572,10 +3572,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="a3ea38a5-a1cb-11f0-b4c1-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="a3e9fec6-a1cb-11f0-862b-b06ebf836ea7"/>
@@ -3648,10 +3648,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="6f7090e2-a1c8-11f0-b224-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="aec5a852-a1cb-11f0-8b29-b06ebf836ea7"/>
@@ -3687,10 +3687,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="6f7090e2-a1c8-11f0-b224-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="b3bd1b8e-a1cb-11f0-b44e-b06ebf836ea7"/>
@@ -3729,10 +3729,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="bc10a5d3-a1cb-11f0-aa20-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="bc106d81-a1cb-11f0-a8cb-b06ebf836ea7"/>
@@ -3805,10 +3805,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="6f7090e2-a1c8-11f0-b224-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="db0b4a01-a1cb-11f0-b248-b06ebf836ea7"/>
@@ -3844,10 +3844,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="6f7090e2-a1c8-11f0-b224-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="cddd5bde-a1ce-11f0-ad90-b06ebf836ea7"/>
@@ -3911,10 +3911,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="6f7090e2-a1c8-11f0-b224-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="f34d9c7b-a1cb-11f0-9ff2-b06ebf836ea7"/>
@@ -3953,10 +3953,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="09d2f160-a1cc-11f0-bde2-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="09d2b584-a1cc-11f0-9575-b06ebf836ea7"/>
@@ -4032,10 +4032,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="327eed26-a1cc-11f0-bf21-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="327eb38b-a1cc-11f0-99de-b06ebf836ea7"/>
@@ -4121,10 +4121,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="6f7090e2-a1c8-11f0-b224-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="dce5910e-a1ce-11f0-877a-b06ebf836ea7"/>
@@ -4719,10 +4719,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="79106a67-a1f0-11f0-ac09-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="79103197-a1f0-11f0-be45-b06ebf836ea7"/>
@@ -4798,10 +4798,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="7ce23aaa-a1f0-11f0-b5f9-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="7ce201c4-a1f0-11f0-a29e-b06ebf836ea7"/>
@@ -4877,10 +4877,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="7ee97c3f-a1f0-11f0-8146-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="7ee9441a-a1f0-11f0-ad15-b06ebf836ea7"/>
@@ -4953,10 +4953,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="a7e7ffbb-a1ef-11f0-ba56-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <matrix>
 <val>(1.0, 0.0, 0.0, 1.0, 1010.0, 320.0)</val>
@@ -5055,10 +5055,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="a7e7ffbb-a1ef-11f0-ba56-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="9c9f23f7-a1f0-11f0-ac1a-b06ebf836ea7"/>
@@ -5135,10 +5135,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="a7e7ffbb-a1ef-11f0-ba56-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="b916c3f8-a1f0-11f0-a2bb-b06ebf836ea7"/>
@@ -5174,10 +5174,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="a7e7ffbb-a1ef-11f0-ba56-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="bc09c79b-a1f0-11f0-bdde-b06ebf836ea7"/>
@@ -5213,10 +5213,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="a7e7ffbb-a1ef-11f0-ba56-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="be649b28-a1f0-11f0-bf6a-b06ebf836ea7"/>
@@ -5252,10 +5252,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="a7e7ffbb-a1ef-11f0-ba56-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="c4b150c8-a1f0-11f0-a2d5-b06ebf836ea7"/>
@@ -5294,10 +5294,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="cb032225-a1f0-11f0-8fc8-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="cb02e712-a1f0-11f0-89bf-b06ebf836ea7"/>
@@ -5373,10 +5373,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="d03b589f-a1f0-11f0-a8a5-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="d03b1d8a-a1f0-11f0-a1d6-b06ebf836ea7"/>
@@ -5452,10 +5452,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="d256cbd6-a1f0-11f0-a722-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="d256906a-a1f0-11f0-8736-b06ebf836ea7"/>
@@ -5528,10 +5528,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="a7e7ffbb-a1ef-11f0-ba56-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="d485f616-a1f0-11f0-ac41-b06ebf836ea7"/>
@@ -5567,10 +5567,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="a7e7ffbb-a1ef-11f0-ba56-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="d66d2087-a1f0-11f0-8c74-b06ebf836ea7"/>
@@ -5606,10 +5606,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="a7e7ffbb-a1ef-11f0-ba56-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="d8c95fa1-a1f0-11f0-ab29-b06ebf836ea7"/>
@@ -5648,10 +5648,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="ffb43450-a1f0-11f0-a3a0-b06ebf836ea7"/>
 </head_subject>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="ffb3ef8b-a1f0-11f0-9d3d-b06ebf836ea7"/>
@@ -5760,10 +5760,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="a7e7ffbb-a1ef-11f0-ba56-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="22acc604-a1f1-11f0-a581-b06ebf836ea7"/>
@@ -5799,10 +5799,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="a7e7ffbb-a1ef-11f0-ba56-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="3ae91e45-a1f1-11f0-b19e-b06ebf836ea7"/>
@@ -6007,10 +6007,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0478b761-a294-11f0-92de-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="ba285699-a294-11f0-ac47-b06ebf836ea7"/>
@@ -6142,10 +6142,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0478b761-a294-11f0-92de-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="d233e74c-a294-11f0-b6a3-b06ebf836ea7"/>
@@ -6393,10 +6393,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0478b761-a294-11f0-92de-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="18cd7d60-a295-11f0-9a23-b06ebf836ea7"/>
@@ -6443,10 +6443,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0478b761-a294-11f0-92de-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="1b5627aa-a295-11f0-a567-b06ebf836ea7"/>
@@ -6587,7 +6587,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(0.0, 0.0)</val>
 </top-left>
 <width>
-<val>104.0</val>
+<val>121.0</val>
 </width>
 <height>
 <val>52.0</val>
@@ -6633,7 +6633,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(0.0, 0.0)</val>
 </top-left>
 <width>
-<val>70.0</val>
+<val>75.0</val>
 </width>
 <height>
 <val>52.0</val>
@@ -6653,10 +6653,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0478b761-a294-11f0-92de-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="813b2963-a295-11f0-9115-b06ebf836ea7"/>
@@ -6725,10 +6725,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0478b761-a294-11f0-92de-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="f1b639c1-a295-11f0-b96c-b06ebf836ea7"/>
@@ -6786,10 +6786,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0478b761-a294-11f0-92de-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="0e5004de-a296-11f0-b922-b06ebf836ea7"/>
@@ -6798,7 +6798,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(1.0, 0.0, 0.0, 1.0, 905.0, 314.58632839099727)</val>
 </matrix>
 <points>
-<val>[(3.0, 0.0), (166.0, 0.0)]</val>
+<val>[(20.0, 0.0), (166.0, 0.0)]</val>
 </points>
 <head-connection>
 <ref refid="458863d6-a295-11f0-b801-b06ebf836ea7"/>
@@ -6847,10 +6847,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0478b761-a294-11f0-92de-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="2d3c916c-a296-11f0-a19f-b06ebf836ea7"/>
@@ -6957,10 +6957,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0478b761-a294-11f0-92de-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="5758898a-a296-11f0-9e9e-b06ebf836ea7"/>
@@ -7065,10 +7065,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0478b761-a294-11f0-92de-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="8aa63266-a296-11f0-aade-b06ebf836ea7"/>
@@ -7126,10 +7126,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0478b761-a294-11f0-92de-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="9dede84e-a296-11f0-a6e4-b06ebf836ea7"/>
@@ -7198,10 +7198,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="0478b761-a294-11f0-92de-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="ab6a07cf-a296-11f0-8767-b06ebf836ea7"/>
@@ -7495,10 +7495,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="75a26c70-a29f-11f0-af6e-b06ebf836ea7"/>
@@ -7843,7 +7843,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>86.0</val>
 </width>
 <height>
-<val>52.0</val>
+<val>67.0</val>
 </height>
 <diagram>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
@@ -7860,10 +7860,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="b589a691-a29f-11f0-b819-b06ebf836ea7"/>
@@ -7910,10 +7910,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="b74fa979-a29f-11f0-8d56-b06ebf836ea7"/>
@@ -7960,10 +7960,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="bee0827c-a29f-11f0-add1-b06ebf836ea7"/>
@@ -8032,10 +8032,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="db7cb66d-a29f-11f0-81ec-b06ebf836ea7"/>
@@ -8044,7 +8044,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(1.0, 0.0, 0.0, 1.0, 443.0, 574.0)</val>
 </matrix>
 <points>
-<val>[(0.0, -2.0), (0.0, 38.0), (-249.0, 38.0), (-249.0, -2.0)]</val>
+<val>[(0.0, -2.0), (0.0, 38.0), (-249.0, 38.0), (-249.0, 13.0)]</val>
 </points>
 <head-connection>
 <ref refid="a05419b8-a29f-11f0-82fd-b06ebf836ea7"/>
@@ -8088,10 +8088,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="e20259eb-a29f-11f0-9485-b06ebf836ea7"/>
@@ -8134,9 +8134,20 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="e4fb02de-a29f-11f0-9a84-b06ebf836ea7"/>
 </trigger>
 </UML:Transition>
+<UML:LiteralString id="8c4df90f-b285-11f0-b62f-891e573b59e7">
+<name>
+<val>spectrum off</val>
+</name>
+<owningConstraint>
+<ref refid="e204eabb-a29f-11f0-bbb9-b06ebf836ea7"/>
+</owningConstraint>
+<value>
+<val>spectrum off</val>
+</value>
+</UML:LiteralString>
 <UML:Constraint id="e204eabb-a29f-11f0-bbb9-b06ebf836ea7">
 <specification>
-<val>spectrum off</val>
+<ref refid="8c4df90f-b285-11f0-b62f-891e573b59e7"/>
 </specification>
 <transition>
 <ref refid="e20259eb-a29f-11f0-9485-b06ebf836ea7"/>
@@ -8179,10 +8190,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="08bcd845-a2a0-11f0-bc7c-b06ebf836ea7"/>
@@ -8229,10 +8240,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="b4bf9689-a2a0-11f0-aa28-b06ebf836ea7"/>
@@ -8290,10 +8301,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="be61176a-a2a0-11f0-bcbf-b06ebf836ea7"/>
@@ -8378,7 +8389,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(0.0, 0.0)</val>
 </top-left>
 <width>
-<val>72.0</val>
+<val>74.0</val>
 </width>
 <height>
 <val>52.0</val>
@@ -8419,7 +8430,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(0.0, 0.0)</val>
 </top-left>
 <width>
-<val>68.0</val>
+<val>74.0</val>
 </width>
 <height>
 <val>52.0</val>
@@ -8439,10 +8450,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="d57d94ce-a2a0-11f0-b75b-b06ebf836ea7"/>
@@ -8511,10 +8522,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="ebd24171-a2a0-11f0-8991-b06ebf836ea7"/>
@@ -8523,7 +8534,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(1.0, 0.0, 0.0, 1.0, 959.0, 292.0)</val>
 </matrix>
 <points>
-<val>[(126.0, -34.0), (168.0, -34.0), (168.0, 27.0), (54.0, 27.0), (54.0, 123.0), (94.0, 123.0)]</val>
+<val>[(128.0, -34.0), (168.0, -34.0), (168.0, 27.0), (54.0, 27.0), (54.0, 123.0), (94.0, 123.0)]</val>
 </points>
 <head-connection>
 <ref refid="c5d9c204-a2a0-11f0-ae3b-b06ebf836ea7"/>
@@ -8564,7 +8575,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(0.0, 0.0)</val>
 </top-left>
 <width>
-<val>104.0</val>
+<val>121.0</val>
 </width>
 <height>
 <val>52.0</val>
@@ -8613,7 +8624,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>168.0</val>
 </width>
 <height>
-<val>34.0</val>
+<val>50.0</val>
 </height>
 <diagram>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
@@ -8651,7 +8662,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(0.0, 0.0)</val>
 </top-left>
 <width>
-<val>80.0</val>
+<val>91.0</val>
 </width>
 <height>
 <val>52.0</val>
@@ -8671,10 +8682,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="60a90ada-a2a1-11f0-8f56-b06ebf836ea7"/>
@@ -8789,10 +8800,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="60c7477c-a2a2-11f0-8747-b06ebf836ea7"/>
@@ -8835,9 +8846,20 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="91fdac56-a2a2-11f0-83aa-b06ebf836ea7"/>
 </trigger>
 </UML:Transition>
+<UML:LiteralString id="8c500fc1-b285-11f0-820e-891e573b59e7">
+<name>
+<val>turn on package</val>
+</name>
+<owningConstraint>
+<ref refid="60ca0f24-a2a2-11f0-8a05-b06ebf836ea7"/>
+</owningConstraint>
+<value>
+<val>turn on package</val>
+</value>
+</UML:LiteralString>
 <UML:Constraint id="60ca0f24-a2a2-11f0-8a05-b06ebf836ea7">
 <specification>
-<val>turn on package</val>
+<ref refid="8c500fc1-b285-11f0-820e-891e573b59e7"/>
 </specification>
 <transition>
 <ref refid="60c7477c-a2a2-11f0-8747-b06ebf836ea7"/>
@@ -8848,10 +8870,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="6e8d2d37-a2a2-11f0-89a1-b06ebf836ea7"/>
@@ -8860,7 +8882,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(1.0, 0.0, 0.0, 1.0, 851.0, 391.0)</val>
 </matrix>
 <points>
-<val>[(-56.0, 38.0), (-17.0, 38.0), (-17.0, 87.0), (59.0, 87.0)]</val>
+<val>[(-39.0, 38.0), (-17.0, 38.0), (-17.0, 87.0), (59.0, 87.0)]</val>
 </points>
 <head-connection>
 <ref refid="2a18768f-a2a1-11f0-a187-b06ebf836ea7"/>
@@ -8894,9 +8916,20 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="7cc5ea27-a2a2-11f0-b8b6-b06ebf836ea7"/>
 </trigger>
 </UML:Transition>
+<UML:LiteralString id="8c50294e-b285-11f0-bc26-891e573b59e7">
+<name>
+<val>turn off package</val>
+</name>
+<owningConstraint>
+<ref refid="6e8fa8cb-a2a2-11f0-8cfc-b06ebf836ea7"/>
+</owningConstraint>
+<value>
+<val>turn off package</val>
+</value>
+</UML:LiteralString>
 <UML:Constraint id="6e8fa8cb-a2a2-11f0-8cfc-b06ebf836ea7">
 <specification>
-<val>turn off package</val>
+<ref refid="8c50294e-b285-11f0-bc26-891e573b59e7"/>
 </specification>
 <transition>
 <ref refid="6e8d2d37-a2a2-11f0-89a1-b06ebf836ea7"/>
@@ -8966,7 +8999,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(0.0, 0.0)</val>
 </top-left>
 <width>
-<val>81.0</val>
+<val>93.0</val>
 </width>
 <height>
 <val>52.0</val>
@@ -9012,7 +9045,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(0.0, 0.0)</val>
 </top-left>
 <width>
-<val>61.0</val>
+<val>71.0</val>
 </width>
 <height>
 <val>52.0</val>
@@ -9032,10 +9065,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="e33de772-a2a2-11f0-9493-b06ebf836ea7"/>
@@ -9044,7 +9077,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(1.0, 0.0, 0.0, 1.0, 723.0, 621.0)</val>
 </matrix>
 <points>
-<val>[(0.0, 1.0), (0.0, 110.0)]</val>
+<val>[(0.0, 17.0), (0.0, 110.0)]</val>
 </points>
 <head-connection>
 <ref refid="309fe267-a2a1-11f0-910e-b06ebf836ea7"/>
@@ -9104,10 +9137,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="0239dd7f-a2a3-11f0-bdb3-b06ebf836ea7"/>
@@ -9116,7 +9149,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(1.0, 0.0, 0.0, 1.0, 783.0, 737.0)</val>
 </matrix>
 <points>
-<val>[(0.5, 0.0), (294.5, 0.0)]</val>
+<val>[(0.5, -6.0), (294.5, 0.0)]</val>
 </points>
 <head-connection>
 <ref refid="b49f06bd-a2a2-11f0-8342-b06ebf836ea7"/>
@@ -9176,10 +9209,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="14c0e29c-a2a3-11f0-ad84-b06ebf836ea7"/>
@@ -9188,7 +9221,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(1.0, 0.0, 0.0, 1.0, 1076.0, 777.0)</val>
 </matrix>
 <points>
-<val>[(1.5, 0.0), (-292.5, 0.0)]</val>
+<val>[(1.5, 0.0), (-292.5, 6.0)]</val>
 </points>
 <head-connection>
 <ref refid="c0e7463d-a2a2-11f0-8e9c-b06ebf836ea7"/>
@@ -9248,10 +9281,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="3abb7de5-a2a3-11f0-8f26-b06ebf836ea7"/>
@@ -9309,10 +9342,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="59615fa4-a297-11f0-a213-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="4b69dbf7-a2a3-11f0-90d5-b06ebf836ea7"/>
@@ -9666,10 +9699,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="d3b85d11-a2a8-11f0-b953-b06ebf836ea7"/>
@@ -9809,10 +9842,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="2f8afd65-a2a9-11f0-bf04-b06ebf836ea7"/>
@@ -9873,10 +9906,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="466ec5f2-a2a9-11f0-8ecd-b06ebf836ea7"/>
@@ -9942,10 +9975,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="56a99ae1-a2a9-11f0-aa77-b06ebf836ea7"/>
@@ -10033,7 +10066,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>70.0</val>
 </width>
 <height>
-<val>34.0</val>
+<val>50.0</val>
 </height>
 <diagram>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
@@ -10074,7 +10107,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>84.0</val>
 </width>
 <height>
-<val>34.0</val>
+<val>50.0</val>
 </height>
 <diagram>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
@@ -10115,7 +10148,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>93.0</val>
 </width>
 <height>
-<val>52.0</val>
+<val>67.0</val>
 </height>
 <diagram>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
@@ -10159,7 +10192,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(0.0, 0.0)</val>
 </top-left>
 <width>
-<val>104.0</val>
+<val>121.0</val>
 </width>
 <height>
 <val>52.0</val>
@@ -10206,7 +10239,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(0.0, 0.0)</val>
 </top-left>
 <width>
-<val>82.0</val>
+<val>94.0</val>
 </width>
 <height>
 <val>52.0</val>
@@ -10252,7 +10285,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(0.0, 0.0)</val>
 </top-left>
 <width>
-<val>62.0</val>
+<val>71.0</val>
 </width>
 <height>
 <val>52.0</val>
@@ -10272,10 +10305,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="8c90371c-a2a9-11f0-a76c-b06ebf836ea7"/>
@@ -10344,10 +10377,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="9adc3027-a2a9-11f0-a15e-b06ebf836ea7"/>
@@ -10400,10 +10433,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="a5c1f08f-a2a9-11f0-a3a4-b06ebf836ea7"/>
@@ -10412,7 +10445,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(1.0, 0.0, 0.0, 1.0, 924.0, 242.0)</val>
 </matrix>
 <points>
-<val>[(-1.0, 5.000000000000057), (0.0, 51.0), (-248.0, 51.0), (-248.0, 153.0), (-249.0, 214.00000000000006)]</val>
+<val>[(-8.5, 5.000000000000057), (0.0, 51.0), (-248.0, 51.0), (-248.0, 153.0), (-249.0, 214.00000000000006)]</val>
 </points>
 <head-connection>
 <ref refid="62a47332-a2a9-11f0-850a-b06ebf836ea7"/>
@@ -10472,10 +10505,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="bc70ad6f-a2a9-11f0-aa94-b06ebf836ea7"/>
@@ -10484,7 +10517,7 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>(1.0, 0.0, 0.0, 1.0, 768.0, 463.0)</val>
 </matrix>
 <points>
-<val>[(0.0, 2.0), (38.0, 2.0), (38.0, 80.0), (171.0, 82.0)]</val>
+<val>[(0.0, -7.0), (38.0, 2.0), (38.0, 80.0), (171.0, 82.0)]</val>
 </points>
 <head-connection>
 <ref refid="77324463-a2a9-11f0-8335-b06ebf836ea7"/>
@@ -10518,9 +10551,20 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="5b9d49b0-a2aa-11f0-ac15-b06ebf836ea7"/>
 </trigger>
 </UML:Transition>
+<UML:LiteralString id="8c54a9ac-b285-11f0-b25a-891e573b59e7">
+<name>
+<val>turn off packet</val>
+</name>
+<owningConstraint>
+<ref refid="bc735533-a2a9-11f0-b886-b06ebf836ea7"/>
+</owningConstraint>
+<value>
+<val>turn off packet</val>
+</value>
+</UML:LiteralString>
 <UML:Constraint id="bc735533-a2a9-11f0-b886-b06ebf836ea7">
 <specification>
-<val>turn off packet</val>
+<ref refid="8c54a9ac-b285-11f0-b25a-891e573b59e7"/>
 </specification>
 <transition>
 <ref refid="bc70ad6f-a2a9-11f0-aa94-b06ebf836ea7"/>
@@ -10531,10 +10575,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="bfc47c37-a2a9-11f0-be2a-b06ebf836ea7"/>
@@ -10577,9 +10621,20 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="3d9c9bf3-a2aa-11f0-8fec-b06ebf836ea7"/>
 </trigger>
 </UML:Transition>
+<UML:LiteralString id="8c54c010-b285-11f0-99e6-891e573b59e7">
+<name>
+<val>turn on packet</val>
+</name>
+<owningConstraint>
+<ref refid="bfc6f61a-a2a9-11f0-aa5c-b06ebf836ea7"/>
+</owningConstraint>
+<value>
+<val>turn on packet</val>
+</value>
+</UML:LiteralString>
 <UML:Constraint id="bfc6f61a-a2a9-11f0-aa5c-b06ebf836ea7">
 <specification>
-<val>turn on packet</val>
+<ref refid="8c54c010-b285-11f0-99e6-891e573b59e7"/>
 </specification>
 <transition>
 <ref refid="bfc47c37-a2a9-11f0-be2a-b06ebf836ea7"/>
@@ -10590,10 +10645,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="c27d4fa9-a2a9-11f0-9a82-b06ebf836ea7"/>
@@ -10643,10 +10698,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="c8d3ec9f-a2a9-11f0-a9c1-b06ebf836ea7"/>
@@ -10771,10 +10826,10 @@ existing classes or even new classes with specific responsibilities.</val>
 <ref refid="efbbfa4f-a2a4-11f0-9fb7-b06ebf836ea7"/>
 </diagram>
 <horizontal>
-<val>0</val>
+<val>False</val>
 </horizontal>
 <orthogonal>
-<val>0</val>
+<val>False</val>
 </orthogonal>
 <subject>
 <ref refid="783915d3-a36f-11f0-8aa1-b06ebf836ea7"/>
