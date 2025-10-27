@@ -6,6 +6,7 @@
 #include <MatrixHardware_Teensy4_ShieldV5.h>        // SmartLED Shield for Teensy 4 (V5)
 #include <SmartMatrix.h>
 #include <FastLED.h>
+#include "SoundSpectrum.h"
 
 #define COLOR_DEPTH 24                  // Choose the color depth used for storing pixels in the layers: 24 or 48 (24 is good for most sketches - If the sketch uses type `rgb24` directly, COLOR_DEPTH must be 24)
 const uint16_t kMatrixWidth = 128;       // Set to the width of your display, must be a multiple of 8
