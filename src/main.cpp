@@ -1,119 +1,101 @@
-#include <Audio.h>
-#include <Wire.h>
-#include <SPI.h>
-#include <SD.h>
-#include <SerialFlash.h>
+/*
+ * This example shows how to display bitmaps that are exported from GIMP and
+ * compiled into the sketch and stored in the Teensy's Flash memory
+ * See more details here:
+ * http://docs.pixelmatix.com/SmartMatrix/library.html#smartmatrix-library-how-to-use-the-library-drawing-raw-bitmaps
+ *
+ * This example uses only the SmartMatrix Background layer
+ */
+
 #include <MatrixHardware_Teensy4_ShieldV5.h>        // SmartLED Shield for Teensy 4 (V5)
 #include <SmartMatrix.h>
-#include <FastLED.h>
-#include "SoundSpectrum.h"
+#include <Wire.h>
+
+// chrome16 is a 16x16 pixel bitmap, exported from GIMP without modification
+#include "bitmaps.h"
 
 #define COLOR_DEPTH 24                  // Choose the color depth used for storing pixels in the layers: 24 or 48 (24 is good for most sketches - If the sketch uses type `rgb24` directly, COLOR_DEPTH must be 24)
 const uint16_t kMatrixWidth = 128;       // Set to the width of your display, must be a multiple of 8
 const uint16_t kMatrixHeight = 32;      // Set to the height of your display
 const uint8_t kRefreshDepth = 36;       // Tradeoff of color quality vs refresh rate, max brightness, and RAM usage.  36 is typically good, drop down to 24 if you need to.  On Teensy, multiples of 3, up to 48: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48.  On ESP32: 24, 36, 48
 const uint8_t kDmaBufferRows = 4;       // known working: 2-4, use 2 to save RAM, more to keep from dropping frames and automatically lowering refresh rate.  (This isn't used on ESP32, leave as default)
-const uint8_t kPanelType = SM_PANELTYPE_HUB75_32ROW_MOD16SCAN;  // Choose the configuration that matches your panels.  See more details in MatrixCommonHub75.h and the docs: https://github.com/pixelmatix/SmartMatrix/wiki
+const uint8_t kPanelType = SM_PANELTYPE_HUB75_32ROW_MOD16SCAN;   // Choose the configuration that matches your panels.  See more details in MatrixCommonHub75.h and the docs: https://github.com/pixelmatix/SmartMatrix/wiki
 const uint32_t kMatrixOptions = (SM_HUB75_OPTIONS_NONE);        // see docs for options: https://github.com/pixelmatix/SmartMatrix/wiki
 const uint8_t kBackgroundLayerOptions = (SM_BACKGROUND_OPTIONS_NONE);
+const uint8_t kIndexedLayerOptions = (SM_INDEXED_OPTIONS_NONE);
 
 SMARTMATRIX_ALLOCATE_BUFFERS(matrix, kMatrixWidth, kMatrixHeight, kRefreshDepth, kDmaBufferRows, kPanelType, kMatrixOptions);
-SMARTMATRIX_ALLOCATE_BACKGROUND_LAYER(backgroundLayer, kMatrixWidth, kMatrixHeight, COLOR_DEPTH, kBackgroundLayerOptions);
+SMARTMATRIX_ALLOCATE_BACKGROUND_LAYER(background, kMatrixWidth, kMatrixHeight, COLOR_DEPTH, kBackgroundLayerOptions);
+SMARTMATRIX_ALLOCATE_INDEXED_LAYER(eyelayer, kMatrixWidth, kMatrixHeight, COLOR_DEPTH, kIndexedLayerOptions);
+SMARTMATRIX_ALLOCATE_INDEXED_LAYER(mouthlayer, kMatrixWidth, kMatrixHeight, COLOR_DEPTH, kIndexedLayerOptions);
 
-#define ADC_INPUT_PIN   A1
+int led = -1;   // Set to -1 to disable LED flash, only needed for debugging purposes
+//int led = 13; // builtin LED pin on the Teensy, interferes with refresh on Teensy 4
 
-AudioInputAnalog         input(ADC_INPUT_PIN);
-AudioAnalyzeFFT256       fft;
-AudioConnection          audioConnection(input, 0, fft, 0);
+void drawBitmap(int16_t x, int16_t y, const Bitmap* bitmap, const bool isEye) {
+  for(unsigned int i=0; i < bitmap->height; i++) {
+    for(unsigned int j=0; j < bitmap->width; j++) {
+      SM_RGB pixel = { bitmap->pixel_data[(i*bitmap->width + j)*3 + 0],
+                      bitmap->pixel_data[(i*bitmap->width + j)*3 + 1],
+                      bitmap->pixel_data[(i*bitmap->width + j)*3 + 2] };
+      if(COLOR_DEPTH == 48) {
+          pixel.red = pixel.red << 8;
+          pixel.green = pixel.green << 8;
+          pixel.blue = pixel.blue << 8;
+      }
 
-// The scale sets how much sound is needed in each frequency range to
-// show all 32 bars.  Higher numbers are more sensitive.
-float scale = 256.0;
-
-// An array to hold the 16 frequency bands
-float level[16];
-
-// This array holds the on-screen levels.  When the signal drops quickly,
-// these are used to lower the on-screen level 1 bar per update, which
-// looks more pleasing to corresponds to human sound perception.
-int shown[16];
-
-const SM_RGB black = CRGB(0, 0, 0);
-
-byte status = 0;
-
-void setup()
-{
-    Serial.begin(115200);
-
-    // Initialize Matrix
-    matrix.addLayer(&backgroundLayer); 
-    matrix.begin();
-
-    matrix.setBrightness(255);
-
-    // Audio requires memory to work.
-    AudioMemory(12);
+      if(pixel.blue > 0 || pixel.red > 0 || pixel.green > 0){
+        if(isEye){
+          eyelayer.setIndexedColor(1, pixel);
+          eyelayer.drawPixel(x + j, y + i, 1);
+        }else{
+          mouthlayer.setIndexedColor(1, pixel);
+          mouthlayer.drawPixel(x + j, y + i, 1);
+        }
+      }
+    }
+  }
 }
 
-void loop()
-{
-    if (fft.available()) {
-        // read the 128 FFT frequencies into 16 levels
-        // music is heard in octaves, but the FFT data
-        // is linear, so for the higher octaves, read
-        // many FFT bins together.
+void select_emotion(int num_bytes){
+  int id = 0;
+  while(1 < Wire.available()){
+    id = Wire.read();
+  }
+  id = Wire.read();
 
-        // I'm skipping the first two bins, as they seem to be unusable
-        // they start out at zero, but then climb and don't come back down
-        // even after sound input stops
-        level[0] = fft.read(2);
-        level[1] = fft.read(3);
-        level[2] = fft.read(4);
-        level[3] = fft.read(5, 6);
-        level[4] = fft.read(7, 8);
-        level[5] = fft.read(9, 10);
-        level[6] = fft.read(11, 14);
-        level[7] = fft.read(15, 19);
-        level[8] = fft.read(20, 25) - 0.505f;
-        level[9] = fft.read(26, 32);
-        level[10] = fft.read(33, 41);
-        level[11] = fft.read(42, 52) - 0.25f;
-        level[12] = fft.read(53, 65);
-        level[13] = fft.read(66, 82);
-        level[14] = fft.read(83, 103);
-        level[15] = fft.read(104, 127);
+  eyelayer.setIndexedColor(0, {0,0,0});
+  mouthlayer.setIndexedColor(0, {0,0,0});
 
-        backgroundLayer.fillScreen(black);
+  eyelayer.fillScreen(0);
+  mouthlayer.fillScreen(0);
 
-        for (int i = 0; i < 16; i++) {
-            // TODO: conversion from FFT data to display bars should be
-            // exponentially scaled.  But how to keep it a simple example?
-            int val = level[i] * scale;
+  drawBitmap(0,0,(const Bitmap*)&Emotes::emotes[id][0], true);
+  drawBitmap(0,16,(const Bitmap*)&Emotes::emotes[id][1], false);
+}
 
-            // trim the bars vertically to fill the matrix height
-            if (val >= kMatrixHeight) val = kMatrixHeight - 1;
+void setup() {
+  Serial.begin(115200);
+  //Wire.begin(60);
 
-            if (val >= shown[i]) {
-                shown[i] = val;
-            }
-            else {
-                if (shown[i] > 0) shown[i] = shown[i] - 1;
-                val = shown[i];
-            }
+  matrix.addLayer(&background);
+  matrix.addLayer(&eyelayer); 
+  matrix.addLayer(&mouthlayer);
+  matrix.begin();
 
-            // color hue based on band
-            SM_RGB color = CRGB(CHSV(i * 15, 255, 255));
+  matrix.setBrightness(212);
+  background.fillScreen({0,0,0});
 
-            // draw the levels on the matrix
-            if (shown[i] >= 0) {
-                // scale the bars horizontally to fill the matrix width
-                for (int j = 0; j < kMatrixWidth / 32; j++) {
-                    backgroundLayer.drawRectangle(i * 8, (kMatrixHeight - 1), i * 8 + j, (kMatrixHeight - 1) - val, color);
-                }
-            }
-        }
+  drawBitmap(0,0,(const Bitmap*)&Emotes::emotes[0][0], true);
+  drawBitmap(0,16,(const Bitmap*)&Emotes::emotes[0][1], false);
 
-        backgroundLayer.swapBuffers();
-    }
+  if(led >= 0)  pinMode(led, OUTPUT);
+
+  //Wire.onReceive(select_emotion);
+}
+
+void loop() {
+  eyelayer.swapBuffers();
+  mouthlayer.swapBuffers();
+  background.swapBuffers();
 }
