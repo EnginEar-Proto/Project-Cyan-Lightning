@@ -783,16 +783,22 @@
 
 Bitmap tired_e;
 Bitmap tired_m;
+
 Bitmap eyesclosed_e;
 Bitmap eyesclosed_m;
+
 Bitmap angry_e;
 Bitmap angry_m;
+
 Bitmap furios_e;
 Bitmap furios_m;
+
 Bitmap sad_e;
 Bitmap sad_m;
+
 Bitmap confused_e;
 Bitmap confused_m;
+
 Bitmap love_e;
 Bitmap love_m;
 

@@ -6,3 +6,12 @@
  * - 
  * - 
  */
+#include <cstdint>
+class I2Cyan {
+protected:
+    uint8_t address;
+public:
+    void subscribe_to_receive();
+    void subscribe_to_request();
+    virtual ~I2Cyan() = 0;
+};
