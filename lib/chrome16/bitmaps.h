@@ -1,3 +1,7 @@
+#ifndef FACE_H
+
+#define FACE_H
+
 // this structre can hold up to a 32x32 pixel RGB bitmap
 typedef struct  {
   unsigned int   width;
@@ -28,3 +32,5 @@ public:
   static Bitmap love_m;
   static Bitmap emotes[10][2];
 };
+
+#endif

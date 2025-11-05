@@ -17,9 +17,10 @@
 
 ### Fine-tuning and development
 
-1. I^2^C communication system
+1. I²C communication system
    - Reimplementing event handling for fixing the issue of memory leaks.
-   - Self-designed upper layer protocol for effective and real-time messaging. 
+   - Self-designed upper layer protocol for effective and real-time messaging.
+   - Platform IO doesn't suppot Wire1.h library, so the usage of multiple I²C will follow the factory design pattern and use the predefined I²CHardware structs for creating a substitution for Wire1..3.
 2. HUB75 connectrs
    - Minimizing the size of the HUB75 connectors be removing the plastic housing and using SMT for connections.
    - Custom sized ribbon cables for better cable management and spacious interior.

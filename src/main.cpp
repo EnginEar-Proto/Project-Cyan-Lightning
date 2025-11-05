@@ -59,10 +59,12 @@ void drawBitmap(int16_t x, int16_t y, const Bitmap* bitmap, const bool isEye) {
 
 void select_emotion(int num_bytes){
   int id = 0;
-  while(1 < Wire.available()){
-    id = Wire.read();
+  while(1 < Wire1.available()){
+    id = Wire1.read();
   }
-  id = Wire.read();
+  id = Wire1.read();
+
+  Serial.println(id);
 
   eyelayer.setIndexedColor(0, {0,0,0});
   mouthlayer.setIndexedColor(0, {0,0,0});
@@ -76,6 +78,8 @@ void select_emotion(int num_bytes){
 
 void setup() {
   Serial.begin(115200);
+  Wire1.begin(0x3c);
+  Wire1.onReceive(select_emotion);
   //Wire.begin(60);
 
   matrix.addLayer(&background);

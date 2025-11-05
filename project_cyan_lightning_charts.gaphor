@@ -265,6 +265,7 @@ controlflow {
 <ref refid="585f224c-71b6-11ec-a409-f47b099bf663"/>
 <ref refid="0b5ba60e-71b7-11ec-a409-f47b099bf663"/>
 <ref refid="12e26ae7-b4c0-11f0-9053-7f7da071857b"/>
+<ref refid="edd9a437-b981-11f0-af3f-f3ce77aee866"/>
 </reflist>
 </ownedDiagram>
 <ownedType>
@@ -12247,5 +12248,48 @@ existing classes or even new classes with specific responsibilities.</val>
 <val>2</val>
 </value>
 </UML:LiteralUnlimitedNatural>
+<UML:ClassDiagram id="edd9a437-b981-11f0-af3f-f3ce77aee866">
+<element>
+<ref refid="f3a82730-71b1-11ec-a409-f47b099bf663"/>
+</element>
+<name>
+<val>FunctionController</val>
+</name>
+<ownedPresentation>
+<reflist>
+<ref refid="01b7509d-b982-11f0-96f6-f3ce77aee866"/>
+</reflist>
+</ownedPresentation>
+</UML:ClassDiagram>
+<UML:Comment id="01b728e6-b982-11f0-a38b-f3ce77aee866">
+<body>
+<val>For the controller class, the strategy design pattern will be used, so the input device can be modified on the fly to either BlueTooth, I2C, or other methods that use a predefined protocol for manipulation of functions and emotions.</val>
+</body>
+<presentation>
+<reflist>
+<ref refid="01b7509d-b982-11f0-96f6-f3ce77aee866"/>
+</reflist>
+</presentation>
+</UML:Comment>
+<UML:CommentItem id="01b7509d-b982-11f0-96f6-f3ce77aee866">
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, 116.7152328491211, 94.37637329101562)</val>
+</matrix>
+<top-left>
+<val>(0.0, 0.0)</val>
+</top-left>
+<width>
+<val>401.39994049072266</val>
+</width>
+<height>
+<val>98.91731262207031</val>
+</height>
+<diagram>
+<ref refid="edd9a437-b981-11f0-af3f-f3ce77aee866"/>
+</diagram>
+<subject>
+<ref refid="01b728e6-b982-11f0-a38b-f3ce77aee866"/>
+</subject>
+</UML:CommentItem>
 </model>
 </gaphor>
