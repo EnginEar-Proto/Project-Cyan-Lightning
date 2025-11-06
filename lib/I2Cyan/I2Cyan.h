@@ -7,11 +7,17 @@
  * - 
  */
 #include <cstdint>
+#include <Wire.h>
 class I2Cyan {
 protected:
     uint8_t address;
+
+    I2Cyan();
+    I2Cyan(uint8_t addr);
 public:
-    void subscribe_to_receive();
-    void subscribe_to_request();
-    virtual ~I2Cyan() = 0;
+    virtual void subscribe_to_receive() = 0;
+    virtual void subscribe_to_request() = 0;
+    virtual void unsub_from_recieve() = 0;
+    virtual void unsub_from_request() = 0;
+    virtual ~I2Cyan();
 };
