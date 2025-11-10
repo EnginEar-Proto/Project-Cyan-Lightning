@@ -14,12 +14,13 @@ Wire0Controller::Wire0Controller(uint8_t addr){
     Wire.begin(this->address);
 }
 
-void Wire0Controller::subscribe_to_receive(void (*subscriber)(int numBytes)){
-    Wire.onReceive(subscriber);
+void Wire0Controller::subscribe_to_receive(I2C_Recieve_Subscriber& sub){
+    void (*func)(int numBytes) = sub.invoke;
+    Wire.onReceive((sub.invoke));
 }
 
-void Wire0Controller::subscribe_to_request(){
-
+void Wire0Controller::subscribe_to_request(I2C_Request_Subscriber& sub){
+    Wire.onRequest(sub.invoke);
 }
 
 void Wire0Controller::unsub_from_recieve(){

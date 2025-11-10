@@ -14,16 +14,16 @@ I2CFactory::~I2CFactory(){
     delete[] I2CFactory::products;
 }
 
-I2Cyan& I2CFactory::create_I2Cyan(){
-    if(sizeof(I2CFactory::products) / sizeof(*I2CFactory::products) == 0){
-        
+I2Cyan& I2CFactory::create_I2Cyan(uint8_t interface){
+    if(interface != 0 || interface != 1) {
+        throw "Only 0 and 1 are accepted as interface identifiers";
     }
 
-    return *newLine;
-}
+    if(interface == 0) {
+        return new Wire0Controller();
+    }else {
 
-I2Cyan& I2CFactory::create_I2Cyan(uint8_t address){
-    I2Cyan *newLine = new I2Cyan(address);
+    }
 }
 
 #endif
