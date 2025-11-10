@@ -44,7 +44,7 @@ void SoundSpectAnalyzer::AnalyzeSpectrum(){
     }
 }
 
-void SoundSpectAnalyzer::ConvertToBars(SMLayerBackground<rgb24, 0U> *bgLayer, int widht, int height){
+void SoundSpectAnalyzer::ConvertToBars(SMLayerBackground<rgb24, 0U>& bgLayer, int widht, int height){
     for(int i = 0; i < 16; i++){
          for (int i = 0; i < 16; i++) {
             // TODO: conversion from FFT data to display bars should be
@@ -70,12 +70,12 @@ void SoundSpectAnalyzer::ConvertToBars(SMLayerBackground<rgb24, 0U> *bgLayer, in
             if (shown[i] >= 0) {
                 // scale the bars horizontally to fill the matrix width
                 for (int j = 0; j < widht / 32; j++) {
-                    bgLayer->drawRectangle(i * 8, (height - 1), i * 8 + j, (height - 1) - val, rgbColor);
+                    bgLayer.drawRectangle(i * 8, (height - 1), i * 8 + j, (height - 1) - val, rgbColor);
                 }
             }
         }
     }
-    bgLayer->swapBuffers();
+    bgLayer.swapBuffers();
 }
 
 #endif

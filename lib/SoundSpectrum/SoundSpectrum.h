@@ -26,5 +26,5 @@ public:
     SoundSpectAnalyzer(unsigned int adc, float scale);
     void Allocate();
     void AnalyzeSpectrum();
-    void ConvertToBars(SMLayerBackground<rgb24, 0U> *bgLayer, int widht, int height);
+    void ConvertToBars(SMLayerBackground<rgb24, 0U>& bgLayer, int widht, int height);
 };
