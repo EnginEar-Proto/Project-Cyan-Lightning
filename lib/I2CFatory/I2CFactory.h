@@ -14,8 +14,8 @@ class I2CFactory{
     static I2Cyan *products[2];
 public:
     I2CFactory();
-    I2Cyan& create_I2Cyan(uint8_t interface);
-    I2Cyan& create_I2Cyan(uint8_t address, uint8_t interface);
+    const I2Cyan& create_I2Cyan(uint8_t interface);
+    const I2Cyan& create_I2Cyan(uint8_t address, uint8_t interface);
     ~I2CFactory();
 };
 
