@@ -6,11 +6,17 @@
 #define Wire0Controller_CPP
 
 Wire0Controller::Wire0Controller(){
+    if(Wire0Controller::initialized) return;
+
+    Wire0Controller::initialized = true;
     Wire.begin();
     this->connect_invokers();
 }
 
 Wire0Controller::Wire0Controller(uint8_t addr){
+    if(Wire0Controller::initialized) return;
+    
+    Wire0Controller::initialized = true;
     this->address = addr;
     Wire.begin(this->address);
     this->connect_invokers();

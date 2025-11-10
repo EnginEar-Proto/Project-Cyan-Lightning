@@ -1,6 +1,9 @@
 #include "I2Cyan.h"
 
 class Wire0Controller : public I2Cyan {
+private:
+    static bool initialized;
+
 public:
     Wire0Controller();
     Wire0Controller(uint8_t addr);
