@@ -4,9 +4,11 @@ class Wire0Controller : public I2Cyan {
 public:
     Wire0Controller();
     Wire0Controller(uint8_t addr);
-    void subscribe_to_receive();
-    void subscribe_to_request();
-    void unsub_from_recieve();
-    void unsub_from_request();
+    void subscribe_to_receive(void (&)(int)) override;
+    void subscribe_to_request(void (&)()) override;
+    void unsub_from_recieve() override;
+    void unsub_from_request() override;
     ~Wire0Controller();
+private:
+    void connect_invokers() override;
 };

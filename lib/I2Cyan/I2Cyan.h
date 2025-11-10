@@ -16,6 +16,7 @@ protected:
 
     I2Cyan();
     I2Cyan(uint8_t addr);
+    virtual void connect_invokers() = 0;
 public:
     virtual void subscribe_to_receive(void (&)(int)) = 0;
     virtual void subscribe_to_request(void (&)(void)) = 0;

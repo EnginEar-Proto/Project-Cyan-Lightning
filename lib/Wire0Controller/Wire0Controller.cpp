@@ -7,20 +7,26 @@
 
 Wire0Controller::Wire0Controller(){
     Wire.begin();
+    this->connect_invokers();
 }
 
 Wire0Controller::Wire0Controller(uint8_t addr){
     this->address = addr;
     Wire.begin(this->address);
+    this->connect_invokers();
 }
 
-void Wire0Controller::subscribe_to_receive(I2C_Recieve_Subscriber& sub){
-    void (*func)(int numBytes) = sub.invoke;
-    Wire.onReceive((sub.invoke));
+void Wire0Controller::connect_invokers(){
+    Wire.onReceive((void (*)(int))&Wire0Controller::invoke_on_recive);
+    Wire.onRequest((void (*)())&Wire0Controller::invoke_on_request);
 }
 
-void Wire0Controller::subscribe_to_request(I2C_Request_Subscriber& sub){
-    Wire.onRequest(sub.invoke);
+void Wire0Controller::subscribe_to_receive(void (&sub)(int numBytes)){
+    this->recieve_events.push_back(sub);
+}
+
+void Wire0Controller::subscribe_to_request(void (&sub)()){
+    this->request_events.push_back(sub);
 }
 
 void Wire0Controller::unsub_from_recieve(){
