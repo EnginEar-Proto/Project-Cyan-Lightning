@@ -36,11 +36,11 @@ void Wire0Controller::subscribe_to_request(void (&sub)()){
 }
 
 void Wire0Controller::unsub_from_recieve(){
-
+    throw "Incomplete function";
 }
 
 void Wire0Controller::unsub_from_request(){
-    
+    throw "Incomplete function";
 } 
 
 Wire0Controller::~Wire0Controller(){
