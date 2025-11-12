@@ -9,10 +9,12 @@
 
 #include <MatrixHardware_Teensy4_ShieldV5.h>        // SmartLED Shield for Teensy 4 (V5)
 #include <SmartMatrix.h>
-#include <Wire.h>
+#include "Wire1Controller.h"
 
 // chrome16 is a 16x16 pixel bitmap, exported from GIMP without modification
 #include "bitmaps.h"
+
+#define LINE1_ADDRESS 0x3c
 
 #define COLOR_DEPTH 24                  // Choose the color depth used for storing pixels in the layers: 24 or 48 (24 is good for most sketches - If the sketch uses type `rgb24` directly, COLOR_DEPTH must be 24)
 const uint16_t kMatrixWidth = 128;       // Set to the width of your display, must be a multiple of 8
@@ -77,25 +79,26 @@ void select_emotion(int num_bytes){
 }
 
 void setup() {
-  Serial.begin(115200);
-  Wire1.begin(0x3c);
-  Wire1.onReceive(select_emotion);
-  //Wire.begin(60);
+    Wire1Controller line_one(LINE1_ADDRESS);
+    line_one.subscribe_to_receive(select_emotion);
 
-  matrix.addLayer(&background);
-  matrix.addLayer(&eyelayer); 
-  matrix.addLayer(&mouthlayer);
-  matrix.begin();
+    // Wire1.begin(LINE1_ADDRESS);
+    // Wire1.onReceive(select_emotion);
 
-  matrix.setBrightness(212);
-  background.fillScreen({0,0,0});
+    Serial.begin(115200);
 
-  drawBitmap(0,0,(const Bitmap*)&Emotes::emotes[0][0], true);
-  drawBitmap(0,16,(const Bitmap*)&Emotes::emotes[0][1], false);
+    matrix.addLayer(&background);
+    matrix.addLayer(&eyelayer); 
+    matrix.addLayer(&mouthlayer);
+    matrix.begin();
 
-  if(led >= 0)  pinMode(led, OUTPUT);
+    matrix.setBrightness(212);
+    background.fillScreen({0,0,0});
 
-  //Wire.onReceive(select_emotion);
+    drawBitmap(0,0,(const Bitmap*)&Emotes::emotes[0][0], true);
+    drawBitmap(0,16,(const Bitmap*)&Emotes::emotes[0][1], false);
+
+    if(led >= 0)  pinMode(led, OUTPUT);
 }
 
 void loop() {

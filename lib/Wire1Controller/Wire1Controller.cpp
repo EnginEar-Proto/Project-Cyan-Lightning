@@ -1,46 +1,56 @@
 #include "Wire1Controller.h"
+#include "Wire.h"
 
-#ifndef WIRE1CONTROLLER_CPP
-#define WIRE1CONTROLLER_CPP
+#ifndef Wire1Controller_CPP
+
+#define Wire1Controller_CPP
+
+std::vector<void (*)(int)> Wire1Controller::receive_callbacks;
+std::vector<void (*)()> Wire1Controller::request_callbacks;
+uint8_t Wire1Controller::address;
+bool Wire1Controller::initialized;
+
 
 Wire1Controller::Wire1Controller(){
-    if(Wire1Controller::initialized) return;
+    if(initialized) return;
 
     Wire1Controller::initialized = true;
     Wire1.begin();
-    this->connect_invokers();
+    Wire1Controller::attach_invokers();
 }
 
-
-Wire1Controller::Wire1Controller(uint8_t addr) {
+Wire1Controller::Wire1Controller(uint8_t addr){
     if(Wire1Controller::initialized) return;
 
     Wire1Controller::initialized = true;
-    this->address = addr;
-    Wire1.begin(addr);
-    this->connect_invokers();
+    Wire1Controller::address = addr;
+    Wire1.begin(Wire1Controller::address);
+    Wire1Controller::attach_invokers();
 }
 
-void Wire1Controller::connect_invokers(){
-    Wire1.onReceive((void (*)(int))&Wire1Controller::invoke_on_recive);
-    Wire1.onRequest((void (*)())&Wire1Controller::invoke_on_request);
+void Wire1Controller::subscribe_to_receive(void (*sub)(int)){
+    receive_callbacks.push_back(sub);
 }
 
-
-void Wire1Controller::subscribe_to_receive(void (&sub)(int numBytes)){
-    this->recieve_events.push_back(sub);
+void Wire1Controller::subscribe_to_request(void (*sub)()){
+    request_callbacks.push_back(sub);
 }
 
-void Wire1Controller::subscribe_to_request(void (&sub)()){
-    this->request_events.push_back(sub);
+void Wire1Controller::invoke_receiver(int numBytes){
+    for(void (*event)(int): receive_callbacks){
+        event(numBytes);
+    }
 }
 
-void Wire1Controller::unsub_from_recieve(){
-    throw "Incomplete function";
+void Wire1Controller::invoke_requesters(){
+    for(void (*event)(): request_callbacks){
+        event();
+    }
 }
 
-void Wire1Controller::unsub_from_request(){
-    throw "Incomplete function";
+void Wire1Controller::attach_invokers(){
+    Wire1.onReceive(invoke_receiver);
+    Wire1.onRequest(invoke_requesters);
 }
 
 Wire1Controller::~Wire1Controller(){
